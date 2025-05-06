@@ -1,20 +1,15 @@
 // problem 1
 // rectangle area
 
-console.log("problem 1");
-
-// what exactly do i need the program to do?
-// we want the user to give us inputs about the rectangle- the length and width
-// then, i need a function to take those inputs, do the area formula math, then console.log me the result of that math
+// console.log("problem 1");
 
 
+// function rectangleArea(l, w) {
+//     console.log(l * w);
 
-function rectangleArea(l, w) {
-    console.log(l * w);
+// }
 
-}
-
-rectangleArea(5, 3);
+// rectangleArea(5, 3);
 
 
 
@@ -24,23 +19,17 @@ rectangleArea(5, 3);
 
 
 // problem 2 
-// feet to inches
 
-//IPO
-// I- prompt the user to enter the number of feet
-// P- 1 foot = 12 inches
-// O- displays the number of feet in that many inches
+// console.log('problem 2');
 
-console.log('problem 2');
+// let feetAmount = Number(prompt('how many feet?'));
 
-let feetAmount = Number(prompt('how many feet?'));
+// function feetToInches(feetAmount) {
+//     let inchesAmount = Number(feetAmount * 12);
+//     console.log(inchesAmount);
+// }
 
-function feetToInches(feetAmount) {
-    let inchesAmount = Number(feetAmount * 12);
-    console.log(inchesAmount);
-}
-
-feetToInches(feetAmount);
+// feetToInches(feetAmount);
 
 
 
@@ -52,66 +41,154 @@ feetToInches(feetAmount);
 
 
 // Problem 3
-// Math Quiz
-
-// I
-// P
-// O
-
-// PROCESS: computer prompts 2 random numbers to be added by the user
-// PROCESS: the program knows the answer already
-// INPUT: user adds the numbers and inputs it in the prompt popup
-// OUTPUT: make a function to do 2 things: if the prompt input matches its answer, alert() correct, if the prompt input does not match, alert() incorrect, with the correct answer
-
-// how to make a program that chooses 2 random numbers 1 - 10
-// how would i do it in the real world?
-
-// i can have a bucket with little sheets of paper labled 1-10 and i reach in 2 times to grab random sheets- kinda feels like an array is needed and make a loop that selects 2 random numbers
-
-let quizNumbers = [1,2,3,4,5,6,7,8,9,10];
-let randomPicks = [];
-
-for(let i = 1; i < 3; i++) {
-    let randomIndex = Math.floor(Math.random() * quizNumbers.length);
-    randomPicks.push(quizNumbers[randomIndex]);
-}
-
-console.log(`the quiz numbers: ${randomPicks}`);
-
-// program it to then multiply the 2 numbers and save the answer as computer answer
-// ive got the 2 numbers, how do i multiply them by eachother 
+// console.log('problem 3');
 
 
-let computerAnswer = randomPicks[0] * randomPicks[1];
-console.log(`answer key: ${computerAnswer}`);
+
+// let quizNumbers = [1,2,3,4,5,6,7,8,9,10];
+// let randomPicks = [];
+
+// for(let i = 1; i < 3; i++) {
+//     let randomIndex = Math.floor(Math.random() * quizNumbers.length);
+//     randomPicks.push(quizNumbers[randomIndex]);
+// }
+
+// console.log(`the quiz numbers: ${randomPicks}`);
 
 
-let userAnswer = Number(prompt(`multiply ${randomPicks}`));
+// let computerAnswer = randomPicks[0] * randomPicks[1];
+// console.log(`answer key: ${computerAnswer}`);
 
-console.log(`the user got: ${userAnswer}`);
 
-if(userAnswer === computerAnswer){
-    alert("You are correct");
-} else if(userAnswer !== computerAnswer) {
-    alert("You are incorrect")
-} 
+// let userAnswer = Number(prompt(`multiply ${randomPicks}`));
+
+// console.log(`the user got: ${userAnswer}`);
+
+// if(userAnswer === computerAnswer){
+//     alert("You are correct");
+// } else if(userAnswer !== computerAnswer) {
+//     alert("You are incorrect")
+// } 
 
 
 
 
 
 // problem 4
-// maximum of two values
+// console.log('problem 4');
 
-// I- promt the user to enter 2 integers
-// P- create a program that compares the two inputted numbers
-// O- returns the value of the bigger number
 
-let a = 2;
-let b = 3;
+// let num1 = Number(prompt('what is the first number?'));
+// let num2 = Number(prompt('what is the second number?'));
 
-// how would i compare two numbers in real life? then code that.
-// create a number line... find the two numbers... the one on the left is the biggest
+// if(num1 > num2) {
+//     alert(`${num1} is the larger number`);
+// } else if(num1 < num2) {
+//     alert(`${num2} is the larger number`);
+// } else if (num1 === num2) {
+//     alert(`these numbers are equal`)
+// }
 
-// i can use operators.... < > = ....
-// should i be using boolean ?
+
+
+
+
+
+
+
+
+
+// problem 5 
+
+// console.log('problem 5');
+
+// let secondsFalling = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// for(let i = 0; i < secondsFalling.length; i++) {
+//     let fallingDistance = (1/2) * 9.8 * (i*i)
+//     console.log(fallingDistance);
+// }
+
+
+
+
+
+
+
+
+
+// problem 6
+console.log('problem 6');
+
+
+// let scores = [];
+
+// for (let i = 0; i < 5; i++) {
+//     scores.push(Number(prompt(`enter test score ${i + 1}`)))
+// }
+
+// console.log(`here are the 5 test scores: ${scores}`);
+
+// let sum = 0;
+
+// for (let j = 0; j < scores.length; j++) {
+//     sum += scores[j];
+// }
+
+// let avgScore = sum / 5;
+// console.log(`avg score: ${avgScore}`);
+
+// if(avgScore >= 90) {
+//     alert('your test avg: A');
+// } else if(avgScore >= 80) {
+//     alert('your test avg: B');
+// } else if(avgScore >= 70) {
+//     alert('your test avg: C');
+// } else if(avgScore >= 60) {
+//     alert('your test avg: D');
+// } else {
+//     alert('your test avg: F');
+// } 
+
+
+// Function to calculate average from an array of scores
+function calcAverage(score1, score2, score3, score4, score5) {
+    return (score1 + score2 + score3 + score4 + score5) / 5;
+  }
+  
+  // Function to determine letter grade based on score
+  function determineGrade(score) {
+    if (score >= 90) {
+      return "A";
+    } else if (score >= 80) {
+      return "B";
+    } else if (score >= 70) {
+      return "C";
+    } else if (score >= 60) {
+      return "D";
+    } else {
+      return "F";
+    }
+  }
+  
+  // Collect the scores
+  let scores = [];
+  for (let i = 0; i < 5; i++) {
+    scores.push(Number(prompt(`enter test score ${i + 1}`)));
+  }
+  
+  console.log(`here are the 5 test scores: ${scores}`);
+  
+  // Calculate average using the function
+  let avgScore = calcAverage(scores[0], scores[1], scores[2], scores[3], scores[4]);
+  console.log(`avg score: ${avgScore}`);
+  
+  // Display grade for each score
+  for (let i = 0; i < scores.length; i++) {
+    let grade = determineGrade(scores[i]);
+    console.log(`Score ${i+1}: ${scores[i]} - Grade: ${grade}`);
+  }
+  
+  // Display final average and grade
+  let finalGrade = determineGrade(avgScore);
+  alert(`your test avg: ${finalGrade}`);
