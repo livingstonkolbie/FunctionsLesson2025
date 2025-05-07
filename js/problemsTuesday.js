@@ -151,6 +151,8 @@ console.log('problem 6');
 // } 
 
 
+
+// BELOW is the correct way to go about this problem using functions 
 // Function to calculate average from an array of scores
 function calcAverage(score1, score2, score3, score4, score5) {
     return (score1 + score2 + score3 + score4 + score5) / 5;
