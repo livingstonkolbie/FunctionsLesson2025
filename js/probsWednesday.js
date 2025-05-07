@@ -50,12 +50,40 @@ function collectPricesFromUser() {
         prices.push(price);
     }
     
-    console.log(prices)
+    return prices;
 }
 
-collectPricesFromUser();
+
+function calcReceipt(prices) {
+    // Calculate subtotal by adding all prices
+    let subtotal = 0;
+    for(let i = 0; i < prices.length; i++) {
+        subtotal += prices[i];
+    }
+    
+    // Calculate tax (7.2%)
+    let salesTax = subtotal * 0.072;
+    
+    // Calculate total
+    let total = subtotal + salesTax;
+    
+    // Return all values
+    return {
+        subtotal: subtotal,
+        salesTax: salesTax,
+        total: total
+    };
+}
+
+// Call functions and display results
+let itemPrices = collectPricesFromUser();
+let receipt = calcReceipt(itemPrices);
+
+// Display results
+console.log("Subtotal: $" + receipt.subtotal.toFixed(2));
+console.log("Sales Tax (7.2%): $" + receipt.salesTax.toFixed(2));
+console.log("Total: $" + receipt.total.toFixed(2));
 
 
 
-
-// i have a prompt that i want to repeat 5 times and take those 5 inputs and put them into an empty array
+// ABOVE we need to go through this an get clarity
