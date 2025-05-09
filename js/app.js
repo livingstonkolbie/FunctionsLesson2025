@@ -47,3 +47,20 @@ const calculateArea = function(length, width) {
 
 let area = calculateArea(5, 10);
 console.log("Area: ", area);
+
+
+// Arrow Function with Implicit Return
+
+const add = (numOne,numTwo) => numOne + numTwo;
+
+let arrowSum = add(2,3);
+console.log(arrowSum);
+
+// Arrow function with a code block
+
+const concat = (wordOne, wordTwo) => {
+    return wordOne + wordTwo;
+}
+
+let solve = concat("Butter", "Ball")
+console.log(solve);

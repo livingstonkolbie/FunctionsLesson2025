@@ -118,7 +118,7 @@
 
 
 // problem 6
-console.log('problem 6');
+// console.log('problem 6');
 
 
 // let scores = [];
