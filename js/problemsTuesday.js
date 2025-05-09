@@ -174,23 +174,46 @@ function calcAverage(score1, score2, score3, score4, score5) {
   }
   
   // Collect the scores
-  let scores = [];
-  for (let i = 0; i < 5; i++) {
-    scores.push(Number(prompt(`enter test score ${i + 1}`)));
-  }
+  // let scores = [];
+  // for (let i = 0; i < 5; i++) {
+  //   scores.push(Number(prompt(`enter test score ${i + 1}`)));
+  // }
   
-  console.log(`here are the 5 test scores: ${scores}`);
+  // console.log(`here are the 5 test scores: ${scores}`);
   
-  // Calculate average using the function
-  let avgScore = calcAverage(scores[0], scores[1], scores[2], scores[3], scores[4]);
-  console.log(`avg score: ${avgScore}`);
+  // // Calculate average using the function
+  // let avgScore = calcAverage(scores[0], scores[1], scores[2], scores[3], scores[4]);
+  // console.log(`avg score: ${avgScore}`);
   
-  // Display grade for each score
-  for (let i = 0; i < scores.length; i++) {
-    let grade = determineGrade(scores[i]);
-    console.log(`Score ${i+1}: ${scores[i]} - Grade: ${grade}`);
-  }
+  // // Display grade for each score
+  // for (let i = 0; i < scores.length; i++) {
+  //   let grade = determineGrade(scores[i]);
+  //   console.log(`Score ${i+1}: ${scores[i]} - Grade: ${grade}`);
+  // }
   
-  // Display final average and grade
-  let finalGrade = determineGrade(avgScore);
-  alert(`your test avg: ${finalGrade}`);
+  // // Display final average and grade
+  // let finalGrade = determineGrade(avgScore);
+  // alert(`your test avg: ${finalGrade}`);
+
+
+// Problem 7 
+// Odd/Even Function designs
+
+// I - prompt() in integer
+// P - function... use modulus to determine if its even or odd
+// O - console log a boot representing if integer is even or odd
+
+// need some functions
+// 1 to decide if it is even
+// 1 to decide if it is odd
+
+function even(number) {
+  console.log(number % 2 === 0);
+}
+
+function odd(number) {
+  console.log(number % 2 !== 0);
+}
+
+even(5);
+odd(5);
