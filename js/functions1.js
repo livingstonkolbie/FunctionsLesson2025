@@ -135,4 +135,6 @@ function calcAverage() {
 calcAverage();
 
 
-
+function determineGrade() {
+    
+}
