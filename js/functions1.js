@@ -133,3 +133,6 @@ function calcAverage() {
 }
 
 calcAverage();
+
+
+
