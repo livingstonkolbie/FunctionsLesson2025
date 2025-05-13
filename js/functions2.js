@@ -67,4 +67,85 @@ function calcReceipt() {
     console.log(`subtotal: ${sum}, tax: ${plusTax}, total: ${total}`);
 }
 
-calcReceipt();
+// calcReceipt();
+
+
+
+
+// Problem 3
+
+// I - the car is traveling 60mph
+// P - distance = speed * time
+// O - display distance for 5hrs, 8hrs, 12hrs
+
+
+function distanceTraveled(time) {
+    let speed = 60;
+    let distance = speed * time
+    console.log(`distance: ${distance} miles in ${time} hrs`);
+}
+
+// distanceTraveled(5);
+// distanceTraveled(8);
+// distanceTraveled(12);
+
+
+
+
+// Problem 4
+
+//I - ask user to enter amount of a purchase 
+//P - compute the state tax (4%) and county sales tax (2%)
+//O - display the amount of the purchase, state tax, county tax, total sales tax, total of the sale (amount of purchase + total sales tax)
+
+
+function computeSalesTax() {
+    let userInput = Number(prompt('enter the amount of your purchase'));
+    let stateTax = Number((userInput * 0.04).toFixed(2));
+    let countyTax = Number((userInput * 0.02).toFixed(2));
+    let totalOfTheSale = Number((userInput + stateTax + countyTax));
+
+
+    console.log(`amount of purchase: $${userInput}, state tax: $${stateTax}, county tax: $${countyTax}, total of the sale: $${totalOfTheSale}`);
+}
+
+// computeSalesTax();
+
+
+
+// Problem 5 
+
+//I - asks user for number of miles driven and the gallons of gas used
+//P - mpg = miles driven / gallons
+//O - display the car's miles per gallon
+
+
+function carsMPG() {
+    let userMiles = Number(prompt('How many miles did you drive?'));
+    let userGallons = Number(prompt('How many gallons did you use?'));
+    let mpg = Number((userMiles / userGallons).toFixed(2));
+    console.log(`miles driven: ${userMiles}, gallons used: ${userGallons}, mpg: ${mpg}`);
+}
+
+// carsMPG();
+
+
+
+// Problem 6
+
+//I - ask the user to enter the charge for the food and a tip percentage
+//P - calculate the amount of tip and 7% sales tax
+//O - display charge for food, tip percentage they want to pay, what the tip amount will be, the 7% sales tax, and the total
+
+
+function calcDinnerCharge() {
+    let mealAmount = Number(prompt('How much did the meal cost?'));
+    let tipPercentage = Number(prompt('What tip percentage do you want to leave?'));
+    let tipCalculation = Number((mealAmount * (tipPercentage * 0.01)).toFixed(2));
+    let total = Number((mealAmount + tipCalculation).toFixed(2));
+    let salesTax = Number((total + (total * 0.07)).toFixed(2));
+    
+    console.log(`charge for food: $${mealAmount}, tip percentage: ${tipPercentage}% which will come out to $${tipCalculation}, total (including 7% sales tax): $${salesTax}`);
+}
+
+calcDinnerCharge();
