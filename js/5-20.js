@@ -147,3 +147,19 @@ function changeColThreeText() {
 }
 
 col3.addEventListener("click", changeColThreeText);
+
+
+// this isnt working BELOW, how do i grab multiple elements with the same ids
+let newBut = document.querySelectorAll("#newBut");
+
+newBut.forEach(newBut => {
+    newBut.addEventListener("click", () => {
+        newBut.style.backgroundColor = "green";
+    });
+});
+
+newBut.forEach(newBut => {
+    newBut.addEventListener("dblclick", () => {
+        newBut.innerText = "double clicked";
+    });
+});
