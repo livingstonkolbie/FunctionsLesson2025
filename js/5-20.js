@@ -101,21 +101,49 @@ for (let i = 0; i < timeArray.length; i++) {
 // console.log(distanceArray);
 
 
-// Problem 6
-
-//I asks the user to enter five test scores
-//P calcAverage() determineGrade()
-//O display a letter grade for each score and the average score
 
 
-function calcAverage() {
-    let score1 = Number(prompt('enter score 1'));
-    let score2 = Number(prompt('enter score 2'));
-    let score3 = Number(prompt('enter score 3'));
-    let score4 = Number(prompt('enter score 4'));
-    let score5 = Number(prompt('enter score 5'));
 
-   for (let i  = 0; i < 5; i++) {
+//Below im doing some notes from mdn web docs_
 
-    }
+let button = document.getElementById("button");
+
+function changePlayerName() {
+    let name = prompt("enter player name");
+    button.innerText = `Name: ${name}`
 }
+
+button.addEventListener("click", changePlayerName);
+
+//ORRRR... mike does the annon function inside the event listener
+
+let ageButton = document.getElementById("ageButton");
+
+ageButton.addEventListener("click", () => {
+    let age = prompt("enter the age");
+    ageButton.innerText = `Player Age: ${age}`
+});
+
+// REMEMBER!!!!! 
+//get element, function, addEventListener (the function can be included/called in the event listener)
+
+
+let col1 = document.getElementById("col1");
+let col2 = document.getElementById("col2");
+let col3 = document.getElementById("col3");
+
+function changeColOne() {
+    col1.style.backgroundColor = "red"
+}
+
+col1.addEventListener("click",changeColOne);
+
+col2.addEventListener("click", () => {
+    col2.style.backgroundColor = "green"
+});
+
+function changeColThreeText() {
+    col3.innerText = "yerrrrr"
+}
+
+col3.addEventListener("click", changeColThreeText);
