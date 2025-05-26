@@ -163,3 +163,34 @@ newBut.forEach(newBut => {
         newBut.innerText = "double clicked";
     });
 });
+
+let reviewButtons = document.querySelectorAll("#tryAgain");
+
+reviewButtons.forEach(reviewButtons => {
+    reviewButtons.addEventListener("click", () => {
+        reviewButtons.style.backgroundColor = "coral";
+    });
+
+});
+
+reviewButtons.forEach(reviewButtons => {
+    reviewButtons.addEventListener('dblclick', () => {
+        reviewButtons.innerText = "click click";
+        reviewButtons.style.backgroundColor = "yellow";
+    });
+});
+
+
+let clickMeButton = document.getElementById("clickMe");
+let h1Joint = document.getElementById("h1Element");
+let count = 1;
+
+clickMeButton.addEventListener("click", () => {
+
+    clickMeButton.innerText = "click again!"
+    h1Joint.innerText = `times clicked: ${count}`
+
+    count += 1;
+});
+
+
