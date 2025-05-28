@@ -194,3 +194,20 @@ clickMeButton.addEventListener("click", () => {
 });
 
 
+let brothers = ["kolton", "conner", "jordan", "nick", ["james", "paul"], 1, 2];
+brothers[1] = 50;
+brothers[4][2] = "peanut";
+
+
+// console.log(brothers[4][2]);
+
+for (const bro of brothers){
+    console.log(bro);
+};
+
+let toys = ["ball", "legos", "skateboard"]
+
+for (const toy of toys) {
+    console.log(toy);
+    console.log(`${toy} is a toy`);
+};
