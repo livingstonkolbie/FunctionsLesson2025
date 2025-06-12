@@ -211,3 +211,26 @@ for (const toy of toys) {
     console.log(toy);
     console.log(`${toy} is a toy`);
 };
+
+
+function calc(a,b) {
+    let add = a + b;
+    console.log(add);
+};
+
+calc(10,5);
+
+function area(l,w) {
+    let area = l * w;
+    console.log(area);
+};
+
+area(50,3);
+
+let number = 3;
+
+if (number === 3) {
+    console.log(`${number} is 3`);
+} else {
+    console.log("nope");
+}
